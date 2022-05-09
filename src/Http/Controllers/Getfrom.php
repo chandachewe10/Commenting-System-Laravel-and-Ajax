@@ -1,5 +1,6 @@
 <?php
 namespace Chandachewe\Comments\Http\Controllers;
+use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -49,7 +50,7 @@ public function commented(Request $request){
         
 public function retrieveComments(){
 $comments=userscomment::all()->sortByDesc('created_at');
-return view("secondindex")->with("comments",$comments);
+return view("Comments::secondindex")->with("comments",$comments);
 
             }
 
@@ -67,7 +68,7 @@ return view("secondindex")->with("comments",$comments);
      */
 public function reply(Request $request,$id){
 $comment_id=$id;
-return view("reply")->with("comment_id",$comment_id);
+return view("Comments::reply")->with("comment_id",$comment_id);
 }
 
    
@@ -107,7 +108,7 @@ return view("reply")->with("comment_id",$comment_id);
      */
      public function retrieveReplies(Request $request){ 
      $replies=replies::where("comments_id",$request->comment_id)->get();
-     return view("replies")->with("replies",$replies);                          
+     return view("Comments::replies")->with("replies",$replies);                          
               
            
             

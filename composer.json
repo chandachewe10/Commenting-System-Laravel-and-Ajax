@@ -1,0 +1,31 @@
+{
+    "name": "chandachewe/comments",
+    "description": "This is the laravel commenting system package which can be used in blogs, website sections and any other comments section in any laravel web application. Users can make comments and make replies to the comments",
+   
+    "keywords": ["commenting system", "laravel", "Ajax"],
+    "license": "MIT",
+   
+    "autoload": {
+        "psr-4": {
+           "Chandachewe\\Comments\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chanda chewe",
+            "email": "chewec03@gmail.com"
+        }
+    ],
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chandachewe\\Comments\\commentingSystemProvider"
+            ]
+        }
+    },
+
+   
+
+    "require": {}
+}

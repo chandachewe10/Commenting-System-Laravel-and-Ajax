@@ -12,7 +12,7 @@ $this->loadRoutesFrom(__DIR__.'/routes/web.php');
 $this->loadViewsFrom(__DIR__.'/resources/Views','Comments');
 
 //Publish views to customise them
-$this->publishes([__DIR__.'/resources/Views'=>resource_path('views/vendor/chandacheweComments')]);
+$this->publishes([__DIR__.'/resources/Views'=>resource_path('views/vendor/Comments'),],'chandachewe-comments');
 
 
 //Load Migrations
@@ -25,3 +25,4 @@ $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
     }
 }
     ?>
+
